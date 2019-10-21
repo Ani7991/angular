@@ -1,0 +1,19 @@
+<p [ngStyle]="{'color':'blue'}">Add new Servers or blueprints!</p>
+
+<p [ngClass]="['textStyle']" >Server Name</p>
+<input type="text" [(ngModel)]="serverNameValue" >
+<p [ngClass]="['textStyle']" >Server Content</p>
+<input type="text" [(ngModel)]="bluePrints" >
+<br />
+<br />
+<button  (click)="addServerName()">Add Server</button>
+<button (click)="addBluePrints()">Add Server Blueprint</button>
+<br />
+<hr />
+<br />
+
+<div  *ngFor="let elem of arr" >
+    <p>{{ elem.name }}</p>
+    <p [ngStyle]="{'color':elem.color}">{{elem.content}}</p>
+</div>
+
